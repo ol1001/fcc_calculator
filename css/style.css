@@ -1,0 +1,46 @@
+body {
+    font-family: 'Average Sans', sans-serif;
+    color: #3e3e3e;
+}
+.calculator {
+    width: 356px;
+    height: 560px;
+    border: 2px dotted #333;
+    border-radius: 4px;
+    margin: 10% auto;
+    background-color: lemonchiffon;
+}
+.outputField {
+    width: 332px;
+    height: 120px;
+    background-color: #fff;
+    margin: 12px;
+    font-size: 2em;
+    color: tomato;
+}
+.operationsField {
+    width: 332px;
+    height: 80px;
+    font-size: 3em;
+    cursor: pointer;
+    margin: 12px;
+    background-color: #fff;
+}
+.numbersField {
+    margin: 12px;
+    background-color: #fff;
+}
+.numbersField span{
+    cursor: pointer;
+    font-size: 3em;
+    width: 80px;
+    height: 80px;
+}
+.result {
+    margin: 12px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 3em;
+    width: 80px;
+    height: 80px;
+}
