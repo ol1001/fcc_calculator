@@ -4,7 +4,6 @@ $(document).ready(function () {
         inputKey = $("span.operationKey, span.numberKey"),
         resultKey = $("span.resultKey"),
         resetKey = $("span.resetKey"),
-        result = 0,
         calc = new Calculator();
 
     inputKey.click(function () {
@@ -23,7 +22,7 @@ $(document).ready(function () {
     });
 
     resetKey.click(function () {
-        location.reload();
+        history.go(0);
     });
 
 });
