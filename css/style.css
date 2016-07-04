@@ -1,21 +1,60 @@
+@font-face {
+    font-family: CaviarDreams_Italic;
+    src: url(fonts/CaviarDreams_Italic.ttf);
+}
+@font-face {
+    font-family: CaviarDreams;
+    src: url(fonts/CaviarDreams.ttf);
+}
 body {
     font-family: 'Average Sans', sans-serif;
+    background: radial-gradient( #fff 40%, #c8c8c8);
 }
 
 .calculator {
     width: 320px;
-    height: 560px;
+    height: 548px;
     margin: 10% auto;
-    border: 2px solid #333;
+    background-color: #3e3e3e;
+    padding: 8px;
+    border-radius: 2px;
+    color: #333;
+}
+.title {
+    font-family: CaviarDreams_Italic, 'Average Sans', sans-serif;
+    padding: 0 8px 0 0 ;
+    position: absolute;
+    height: 40px;
+    line-height: 32px;
+    background-color: #3e3e3e;
+    color: #fff;
+    border-bottom-right-radius: 4px;
+}
+.outputContainer {
+    height: 140px;
+    width: 304px;
     border-radius: 4px;
+    background-color: #fff;
+    padding: 0 8px;
+    overflow: hidden;
+}
+.outputContainer p {
+    font-family: CaviarDreams_Italic;
+    font-size: 2em;
+    float: right;
+    margin: 70px 0 0 0;
+}
+.keysContainer {
+    height: 400px;
+    width: 320px;
+    margin-top: 8px;
+    font-size: 1.6em;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.outputField {
-    height: 136px;
-    width: 296px;
-    margin: 10px;
-    border: 2px solid #333;
-    border-radius: 4px;
+.keysContainer span:hover {
+    opacity: 0.85;
 }
 
 .row {
@@ -34,6 +73,7 @@ body {
 
 .numberKey {
     background-color: mediumpurple;
+    color: #fff;
 }
 
 .operationKey {

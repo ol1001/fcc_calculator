@@ -1,22 +1,27 @@
 $(document).ready(function () {
 
-    var outputField = $(".outputField"),
-        inputElement = $(".operationsField span, .numbersField span"),
-        resultKey = $(".result span"),
+    var output = $("div.outputContainer p"),
+        inputElement = $("span.operationKey, span.numberKey"),
+        resultKey = $("span.resultKey"),
+        resetKey = $("span.resetKey"),
         result = 0,
         calc = new Calculator();
 
     inputElement.click(function () {
         var currentValue = this.textContent;
 
-        outputField.append(currentValue);
+        output.append(currentValue);
     });
 
     resultKey.click(function () {
-        var insertedExpression = outputField[0].innerHTML;
+        var insertedExpression = output[0].innerHTML;
         if (calc.parse(insertedExpression)) {
-            outputField.text(calc.process());
+            output.text(calc.process());
         }
+    });
+
+    resetKey.click(function (){
+       output.text("");
     });
 
 });
@@ -26,12 +31,9 @@ function Calculator() {
         this.expression = expression;
         return true;
     };
+
     this.process = function () {
         return eval(this.expression);
-    };
-
-    this.setUser = function (user) {
-        this.user = user;
     };
 
 }
