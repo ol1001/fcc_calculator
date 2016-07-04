@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
     var output = $("div.outputContainer p"),
-        inputElement = $("span.operationKey, span.numberKey"),
+        inputKey = $("span.operationKey, span.numberKey"),
         resultKey = $("span.resultKey"),
         resetKey = $("span.resetKey"),
         result = 0,
         calc = new Calculator();
 
-    inputElement.click(function () {
+    inputKey.click(function () {
         var currentValue = this.textContent;
 
         output.append(currentValue);
@@ -17,11 +17,13 @@ $(document).ready(function () {
         var insertedExpression = output[0].innerHTML;
         if (calc.parse(insertedExpression)) {
             output.text(calc.process());
+        } else {
+            displayWarning(output);
         }
     });
 
-    resetKey.click(function (){
-       output.text("");
+    resetKey.click(function () {
+        output.text("");
     });
 
 });
@@ -29,7 +31,13 @@ $(document).ready(function () {
 function Calculator() {
     this.parse = function (expression) {
         this.expression = expression;
-        return true;
+
+        var regex = /((\+|\-)?\d+(\+|\-|\/|\*|\.){1}\d+)+/g;
+        var result = regex.test(expression);
+
+        console.log(result);
+
+        return result;
     };
 
     this.process = function () {
@@ -37,3 +45,20 @@ function Calculator() {
     };
 
 }
+
+function displayWarning(element) {
+    element.css('color', '#FF6347');
+    setInterval(blinker, 500);
+
+    function blinker() {
+        element.fadeOut(300);
+        element.fadeIn(300);
+    }
+
+}
+
+
+
+
+
+
