@@ -40,6 +40,7 @@ body {
 }
 .outputContainer p {
     font-family: CaviarDreams_Italic;
+    max-width: 300px;
     font-size: 2em;
     float: right;
     margin: 70px 0 0 0;

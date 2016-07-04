@@ -23,7 +23,7 @@ $(document).ready(function () {
     });
 
     resetKey.click(function () {
-        output.text("");
+        location.reload();
     });
 
 });
@@ -32,12 +32,15 @@ function Calculator() {
     this.parse = function (expression) {
         this.expression = expression;
 
-        var regex = /((\+|\-)?\d+(\+|\-|\/|\*|\.){1}\d+)+/g;
-        var result = regex.test(expression);
+        var regexDots = /(\d+\.){2,}/g;
+        var regexExpression = /^((\+|\-)?\d+)((\+|\-|\/|\*|%|\.){1}\d+)+/g;
 
-        console.log(result);
-
-        return result;
+        if (! regexDots.test(expression)) {
+            var matchedString = expression.match(regexExpression);
+            return matchedString == expression;
+        } else {
+            return false;
+        }
     };
 
     this.process = function () {
