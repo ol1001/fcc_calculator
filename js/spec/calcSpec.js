@@ -20,6 +20,7 @@ describe("Calculator", function () {
 
         it("should be able to process correct expression", function () {
             var expression = "2+3/2*10";
+                calc.parse(expression);
                 expect(calc.process()).toEqual(17);
         });
 

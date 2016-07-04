@@ -29,4 +29,9 @@ function Calculator() {
     this.process = function () {
         return eval(this.expression);
     };
+
+    this.setUser = function (user) {
+        this.user = user;
+    };
+
 }
