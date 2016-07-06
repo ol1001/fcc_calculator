@@ -1,89 +1,97 @@
 @font-face {
   font-family: CaviarDreams_Italic;
-  src: url(fonts/CaviarDreams_Italic.ttf);
+  src: url(./fonts/CaviarDreams_Italic.ttf);
 }
 body {
   font-family: 'Average Sans', sans-serif;
-  background: radial-gradient(#fff 40%, #c8c8c8);
+  background: radial-gradient( #fff 40%, #c8c8c8);
 }
+
 .calculator {
-  width: 20rem;
-  height: 34.25rem;
+  width: 320/16rem;
+  height: 548/16rem;
   margin: 10% auto;
   background-color: #3e3e3e;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
+  padding: 8/16rem;
+  border-radius: 2/16rem;
   color: #333;
 }
 .title {
   font-family: CaviarDreams_Italic, 'Average Sans', sans-serif;
-  padding: 0 0.5rem 0 0;
+  padding: 0 8/16rem 0 0 ;
   position: absolute;
-  height: 2.5rem;
-  line-height: 2rem;
+  height: 40/16rem;
+  line-height: 32/16rem;
   background-color: #3e3e3e;
   color: #fff;
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: 4/16rem;
 }
 .outputContainer {
-  height: 8.75rem;
-  width: 19rem;
-  border-radius: 0.25rem;
+  height: 140/16rem;
+  width: 304/16rem;
+  border-radius: 4/16rem;
   background-color: #fff;
-  padding: 0 0.5rem;
+  padding: 0 8/16rem;
   overflow: hidden;
 }
 input#outputExpression {
   font-family: CaviarDreams_Italic, 'Average Sans', sans-serif;
-  max-width: 18.75rem;
+  max-width: 300/16rem;
   font-size: 2rem;
   float: right;
-  margin: 4.375rem 0 0 0;
+  margin: 70/16rem 0 0 0;
   -webkit-appearance: none;
   border: none;
 }
-input:focus,
-input:active {
+input:focus, input:active{
   outline: none;
   border: none;
 }
 .keysContainer {
-  height: 25rem;
-  width: 20rem;
-  margin-top: 0.5rem;
+  height: 400/16rem;
+  width: 320/16rem;
+  margin-top: 8/16rem;
   font-size: 1.6rem;
-  border-radius: 0.25rem;
+  border-radius: 4/16rem;
   overflow: hidden;
 }
+
 .keysContainer span:hover {
   opacity: 0.85;
 }
+
 .row {
-  width: 20rem;
+  width: 320/16rem;
 }
+
 .row span {
   display: inline-block;
   cursor: pointer;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
+  width: 80/16rem;
+  height: 80/16rem;
+  line-height: 80/16rem;
   text-align: center;
   float: left;
 }
+
 .numberKey {
   background-color: mediumpurple;
   color: #fff;
 }
+
 .operationKey {
   background-color: #73dbc2;
 }
+
 .resetKey {
   background-color: #fff;
 }
+
 span.resultKey {
   background-color: tomato;
-  width: 15rem;
+  width: 240/16rem;
 }
+
 .warningColor {
-  color: #FF6347;
+  color:#FF6347;
 }
