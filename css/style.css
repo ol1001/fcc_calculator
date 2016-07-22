@@ -1,0 +1,89 @@
+@font-face {
+  font-family: CaviarDreams_Italic;
+  src: url(fonts/CaviarDreams_Italic.ttf);
+}
+body {
+  font-family: 'Average Sans', sans-serif;
+  background: radial-gradient(#fff 40%, #c8c8c8);
+}
+.calculator {
+  width: 20rem;
+  height: 34.25rem;
+  margin: 10% auto;
+  background-color: #3e3e3e;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  color: #333;
+}
+.title {
+  font-family: CaviarDreams_Italic, 'Average Sans', sans-serif;
+  padding: 0 0.5rem 0 0;
+  position: absolute;
+  height: 2.5rem;
+  line-height: 2rem;
+  background-color: #3e3e3e;
+  color: #fff;
+  border-bottom-right-radius: 0.25rem;
+}
+.outputContainer {
+  height: 8.75rem;
+  width: 19rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  padding: 0 0.5rem;
+  overflow: hidden;
+}
+input#outputExpression {
+  font-family: CaviarDreams_Italic, 'Average Sans', sans-serif;
+  max-width: 18.75rem;
+  font-size: 2rem;
+  float: right;
+  margin: 4.375rem 0 0 0;
+  -webkit-appearance: none;
+  border: none;
+}
+input:focus,
+input:active {
+  outline: none;
+  border: none;
+}
+.keysContainer {
+  height: 25rem;
+  width: 20rem;
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.keysContainer span:hover {
+  opacity: 0.85;
+}
+.row {
+  width: 20rem;
+}
+.row span {
+  display: inline-block;
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  float: left;
+}
+.numberKey {
+  background-color: mediumpurple;
+  color: #fff;
+}
+.operationKey {
+  background-color: #73dbc2;
+}
+.resetKey {
+  background-color: #fff;
+}
+span.resultKey {
+  background-color: tomato;
+  width: 15rem;
+}
+.warningColor {
+  color: #FF6347;
+}
